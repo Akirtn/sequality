@@ -9,6 +9,21 @@ public class App {
   }
 
   public static void main(String[] args) {
+    Calculate calculate = new Calculate();
+    int sum,odd_sum,even_sum,cum_sum;
+    double ave; 
     System.out.println(new App().getGreeting());
+
+    sum = calculate.sum(2,3);
+    ave = calculate.average(sum,2);
+    System.out.println("Sum of 2 and 3 is " + sum +". Average is "+ave+".");
+    
+    cum_sum = calculate.cum_sum(1,10);
+    ave = calculate.average(cum_sum,(10-1+1));
+    System.out.println("Sum of 1 to 10 is " + cum_sum +". Average is "+ave+".");
+    
+    odd_sum = calculate.odd_sum(1,10);
+    even_sum = calculate.even_sum(1,10);
+    System.out.println("Sum of odd of 1 to 10 is " + odd_sum +". Sum of even is "+even_sum+".");
   }
 }
